@@ -11,10 +11,11 @@ resource "aws_s3_bucket_public_access_block" "private" {
   restrict_public_buckets = true
 }
 
-resource "aws_s3_bucket_acl" "private" {
-  bucket = aws_s3_bucket.private.id
-  acl    = "private"
-}
+#2023年4月以降使用不可
+#resource "aws_s3_bucket_acl" "private" {
+#  bucket = aws_s3_bucket.private.id
+#  acl    = "private"
+#}
 
 resource "aws_s3_bucket_versioning" "private" {
   bucket = aws_s3_bucket.private.id
@@ -37,10 +38,11 @@ resource "aws_s3_bucket" "public" {
   bucket = "s3-YOUR-BUCKET-NAME-public"
 }
 
-resource "aws_s3_bucket_acl" "public" {
-  bucket = aws_s3_bucket.public.id
-  acl    = "public-read"
-}
+#2023年4月以降使用不可
+#resource "aws_s3_bucket_acl" "public" {
+#  bucket = aws_s3_bucket.public.id
+#  acl    = "public-read"
+#}
 
 resource "aws_s3_bucket_cors_configuration" "public" {
   bucket = aws_s3_bucket.public.id
