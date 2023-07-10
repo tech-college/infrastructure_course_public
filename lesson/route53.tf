@@ -1,6 +1,6 @@
 # Host zone
 locals {
-  host_zone_id   = "YOURE-ZON-ID"
+  host_zone_id   = "YOUR-ZONE-ID"
   host_zone_name = "YOUR-DOMAIN-NAME"
 }
 
