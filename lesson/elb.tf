@@ -138,7 +138,6 @@ resource "aws_lb_target_group" "example" {
   ]
 }
 
-/* テキスト#13の時点ではフォワード先がないためコメントアウト
 # Listener rule
 resource "aws_lb_listener_rule" "example" {
   listener_arn = aws_lb_listener.https.arn
@@ -155,4 +154,3 @@ resource "aws_lb_listener_rule" "example" {
     }
   }
 }
-*/
