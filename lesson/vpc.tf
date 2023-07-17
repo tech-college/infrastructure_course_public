@@ -125,14 +125,14 @@ resource "aws_subnet" "private_1" {
 
 # Multi AZ NAT Gateway
 resource "aws_eip" "nat_gateway_0" {
-  vpc = true
+  domain = "vpc"
   depends_on = [
     aws_internet_gateway.example
   ]
 }
 
 resource "aws_eip" "nat_gateway_1" {
-  vpc = true
+  domain = "vpc"
   depends_on = [
     aws_internet_gateway.example
   ]
