@@ -7,7 +7,7 @@ resource "aws_ssm_parameter" "db_username" {
 
 resource "random_password" "db_password" {
   length           = 20
-  override_special = "!#%&()*+,-./;<=>?@[]^_{|}~"
+  override_special = "!#%&()*+,-.;<=>?@[]^_{|}~"
 }
 
 resource "aws_ssm_parameter" "db_password" {
@@ -25,7 +25,7 @@ resource "aws_ssm_parameter" "db_password" {
 
 resource "random_password" "rds_admin_password" {
   length           = 20
-  override_special = "!@#$%^&*()_+-="
+  override_special = "!#$%^&*()_+-="
 }
 
 resource "aws_ssm_parameter" "rds_admin_password" {
@@ -43,7 +43,7 @@ resource "aws_ssm_parameter" "rds_admin_password" {
 
 resource "random_password" "pipeline" {
   length           = 20
-  override_special = "!@#$%^&*()_+-="
+  override_special = "!#$%^&*()_+-="
 }
 
 resource "aws_ssm_parameter" "pipeline" {
