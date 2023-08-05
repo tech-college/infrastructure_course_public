@@ -115,9 +115,9 @@ resource "aws_elasticache_replication_group" "example" {
   engine_version             = "5.0.6"
   num_cache_clusters         = 3
   node_type                  = "cache.t4g.micro"
-  snapshot_window            = "09:10-10:10"
+  snapshot_window            = "15:10-16:10"
   snapshot_retention_limit   = 7
-  maintenance_window         = "mon:10:40-mon:11:40"
+  maintenance_window         = "sum:16:40-sun:17:40"
   automatic_failover_enabled = true
   port                       = 6379
   apply_immediately          = false
