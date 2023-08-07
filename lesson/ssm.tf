@@ -7,7 +7,7 @@ resource "aws_ssm_parameter" "db_username" {
 
 resource "random_password" "db_password" {
   length           = 20
-  override_special = "!#%&()*+,-.;<=>?@[]^_{|}~"
+  override_special = "!#%&()*+,-.;<=>?[]^_{|}~"
 }
 
 resource "aws_ssm_parameter" "db_password" {
