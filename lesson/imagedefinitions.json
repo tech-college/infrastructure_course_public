@@ -1,0 +1,6 @@
+[
+  {
+    "name": "example",
+    "imageUri": "YOUR-REPOSITORY-URI:latest"
+  }
+]
